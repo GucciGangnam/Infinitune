@@ -1,0 +1,62 @@
+.NavBar{
+    width: 100wv;
+    outline: 1px solid rgb(0, 0, 0);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px;
+}
+
+    .NavBarLeft{
+
+    }
+
+    .NavBarRight{
+        /* outline: 1px dashed green; */
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+        ul{ 
+            /* outline: 1px dashed pink; */
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+            .NavButton{ 
+                border: none;
+                padding: 0;
+                background: none;
+                color: rgba(0, 0, 0, 0.777);
+                font: inherit;
+                cursor: pointer;
+            }
+            .NavButton:hover{ 
+                color: rgba(0, 0, 0);
+            }
+            .NavButtonSelected{ 
+                color: rgba(0, 0, 0);
+            }
+
+        .CartButton{
+            border: 3px solid darkgreen;
+            border-radius: 25px;
+            padding-left: 30px;
+            padding-right: 30px;
+            background: rgb(10, 201, 19);
+            color: white;
+            font: inherit;
+            align-items: center;
+            text-align: center;
+            font-size: larger;
+            cursor: pointer;
+        }
+            .CartButton:hover{
+                border: 3px solid darkgreen;
+                background: rgb(9, 174, 17);
+                border-radius: 25px;
+            }
+    
