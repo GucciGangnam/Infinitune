@@ -1,0 +1,13 @@
+.ErrorPage{ 
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ErrorIMG{ 
+    width: 300px;
+    padding-top: 10%;
+}
