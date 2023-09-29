@@ -1,4 +1,5 @@
 // Imports
+import { Link } from "react-router-dom"
 
 // Import Style 
 import "./NavBar.css"
@@ -6,7 +7,7 @@ import "./NavBar.css"
 
 // Component
 
-export const NavBar = ({currentPage, setCurrentPage}) => { 
+export const NavBar = ({currentPage}) => { 
     return ( 
         <div className="NavBar">
 
@@ -16,9 +17,9 @@ export const NavBar = ({currentPage, setCurrentPage}) => {
 
             <div className="NavBarRight">
                 <ul>
-                    <button className="NavButton">Home</button>
-                    <button className="NavButton">Products</button>
-                    <button className="NavButton">Something</button>
+                    <Link className="NavButton" to="/">Home</Link>
+                    <Link className="NavButton" to="/error">Products</Link>
+                    <Link className="NavButton" to="/error">Error Page</Link>
                 </ul>
                 <button className="CartButton">Cart</button>
             </div>
