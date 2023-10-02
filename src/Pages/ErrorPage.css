@@ -1,14 +1,17 @@
 .ErrorPage{ 
-    width: 100vw;
-    height: 100vh;
+    outline: 1px solid blue;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(157, 157, 157);
+    height: calc(100vh - 91px);
+    overflow: scroll;
+    width: 100%;
+    background-color: white;
+
 }
 
 .ErrorIMG{ 
-    width: 300px;
+    width: 20%;
     padding-top: 10%;
 }

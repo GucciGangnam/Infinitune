@@ -1,9 +1,10 @@
-.App{ 
+.App { 
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  justify-content: center;
   align-items: center;
+  background-color: black;
   max-width: 2000px;
-  align-items: center;
-  
+  width: 100vw;
+  color: white;
 }

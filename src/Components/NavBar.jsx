@@ -1,18 +1,18 @@
-// Imports
-import { Link } from "react-router-dom"
-
-// Import Style 
+// Import Styles 
 import "./NavBar.css"
 
+// Import Links 
+import { Link } from "react-router-dom"
 
-// Component
 
-export const NavBar = ({currentPage}) => { 
+
+// Component 
+export const NavBar = () => { 
     return ( 
         <div className="NavBar">
 
             <div className="NavBarLeft">
-                <h1>{currentPage}</h1>
+                <h1>LOGO</h1>
             </div>
 
             <div className="NavBarMiddle">

@@ -1,5 +1,4 @@
 .NavBar {
-    position: fixed;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -31,6 +30,7 @@
     }
         .SearchBar{ 
             width: 100%;
+            min-width: 184px;
             font-size: large;
             padding: 5px 10px; /* You can adjust these values as needed */
             border-radius: 25px; /* Adjust the radius as needed */

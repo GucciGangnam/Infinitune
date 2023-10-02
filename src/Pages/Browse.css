@@ -1,4 +1,4 @@
-.PageBrowse{ 
+.Browse{ 
     display: flex;
     flex-direction: column;
     width: 100vw;
@@ -8,23 +8,14 @@
     color: white;
     }
 
-.PageBrowseContainer{ 
-    width: 100%;
-    margin-top: 91px;
-    height: calc(100vh - 91px);
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-}
-
     .BrowseByContainer{ 
         margin:25px;
         border-radius: 15px;
         background-color: rgba(34, 34, 34, 1);
-        flex: 1;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         padding-bottom: 15px;
+        max-height: fit-content;
+        width: calc(100% - 25px);
     }

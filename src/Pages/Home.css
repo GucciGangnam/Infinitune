@@ -1,8 +1,7 @@
-.PageHome{
+.Home{
     background-color: black;
     width: 100%;
     height: calc(100vh - 91px);
-    margin-top: 91px;
     display: flex;
     flex-direction: column;
 }
@@ -32,6 +31,7 @@
         flex-direction: column;
         justify-content: space-evenly;
         padding-bottom: 15px;
+        max-height: fit-content;
 
     }
         h3{ 
@@ -84,3 +84,27 @@
                     .HomeCovers:hover{
                         filter:blur(2px)
                     }
+
+/* API LOADING ANIMATIONS*/
+
+.LoadingNewReleaseImageContainer{ 
+    color: black;
+    width: 200px;
+    aspect-ratio: 1/1;
+    border-radius: 15px;
+    animation: gradientAnimation 700ms linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes gradientAnimation {
+    0% {
+        background-color: rgba(34, 34, 34, 1);
+    }
+    50% {
+        background-color: rgb(0, 34, 0);
+    }
+    1000% {
+        background-color: rgba(34, 34, 34, 1);
+    }
+}
