@@ -19,7 +19,6 @@ export const generateAccessToken = async () => {
         },
         body: 'grant_type=client_credentials&client_id=' + CLIENT_ID + '&client_secret=' + CLIENT_SECRET
     };
-
     try {
         const response = await fetch('https://accounts.spotify.com/api/token', authParameters);
         const data = await response.json();
@@ -30,7 +29,16 @@ export const generateAccessToken = async () => {
     }
 };
 
-// FETCH TOP 5 NEW RELEASES //
+// FETCH TOP 4 NEW RELEASES //
+
+export const fetchTop4NewReleases = () => { 
+
+
+
+    
+}
+
+
 
 
 

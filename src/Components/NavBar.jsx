@@ -15,11 +15,15 @@ export const NavBar = ({currentPage}) => {
                 <h1>{currentPage}</h1>
             </div>
 
+            <div className="NavBarMiddle">
+            <input className="SearchBar" type="search" id="search-bar" name="search" placeholder="Search by artist..."/>
+            </div>
+
             <div className="NavBarRight">
                 <ul>
                     <Link className="NavButton" to="/">Home</Link>
-                    <Link className="NavButton" to="/error">Products</Link>
-                    <Link className="NavButton" to="/error">Error Page</Link>
+                    <Link className="NavButton" to="/browse">Browse</Link>
+                    <Link className="NavButton" to="/error">ErrorPage</Link>
                 </ul>
                 <button className="CartButton">Cart</button>
             </div>

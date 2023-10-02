@@ -35,7 +35,7 @@ useEffect(() => {
   const [currentPage, setCurrentPage] = useState('Home');
   return (
     <div className="App">
-      {/* <NavBar currentPage={currentPage} setCurrentPage={setCurrentPage} /> */}
+      <NavBar currentPage={currentPage} setCurrentPage={setCurrentPage} />
       <PageHome accessToken={accessToken} />
     </div>
   )
