@@ -1,6 +1,7 @@
 .Home{
     background-color: black;
     width: 100%;
+    margin-top: 91px;
     height: calc(100vh - 91px);
     display: flex;
     flex-direction: column;
@@ -58,6 +59,10 @@
             }
 
             .CoverOverlayText {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
                 position: absolute;
                 top: 50%; /* Adjust the vertical position as needed */
                 left: 50%; /* Adjust the horizontal position as needed */

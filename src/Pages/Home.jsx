@@ -32,9 +32,10 @@ export const Home = ({ accessToken }) => {
                     const data = await response.json();
                     setNewReleases(data.albums.items);
                     setLoading(false);
-                    // console.log(data.albums.items)
+                    console.log(data.albums.items)
                 } else {
                     console.error('Failed to fetch new releases');
+                    // setError(true);
                 }
             } catch (error) {
                 console.error('Error fetching new releases:', error);
@@ -100,7 +101,7 @@ export const Home = ({ accessToken }) => {
                 <h3>Trending New Releases</h3>
                 <div className="NewReleasePhotoDiv">
                     {newReleases.map((release) => (
-                        <div key={release.id} className="NewReleaseImageContainer">
+                        <div onClick={() => console.log(release.name + " clicked")} key={release.id} className="NewReleaseImageContainer">
                             <img className="HomeCovers" src={release.images[0].url} alt={release.name} />
                             <p className="CoverOverlayText">{release.name} <br />{release.artists[0].name} </p>
                         </div>

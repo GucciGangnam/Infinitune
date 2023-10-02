@@ -11,6 +11,10 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.2); /* Adjust border properties as needed */
     box-sizing: border-box; /* Include padding and border in width calculation */
     color: rgb(255, 255, 255);
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    gap: 10px;
 }
 
     .NavBarLeft{

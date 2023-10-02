@@ -11,6 +11,7 @@ import './App.css'
 import { Home } from './Pages/Home'
 import { Browse } from './Pages/Browse'
 import { ErrorPage } from './Pages/ErrorPage'
+import { Product } from './Pages/Product'
 
 // Import Components 
 import { NavBar } from './Components/NavBar'
@@ -62,6 +63,8 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<Home accessToken={accessToken} />} />
         <Route path="/browse" element={<Browse accessToken={accessToken} />} />
+        <Route path="/browse/product/:id" element={<Product accessToken={accessToken} />} />
+
         <Route path="*" element={<ErrorPage/>} />
 
       </Routes>

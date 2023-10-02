@@ -6,6 +6,8 @@
     max-width: 2000px;
     align-items: center;
     color: white;
+    margin-top: 91px;
+    min-height: calc(100vh - 91px);
     }
 
     .BrowseByContainer{ 
