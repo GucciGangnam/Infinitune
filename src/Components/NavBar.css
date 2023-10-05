@@ -26,12 +26,35 @@
         }
 
     .NavBarMiddle{ 
-        /* width: 33%; */
+        position: relative;
+        /* outline: 1px solid blue;; */
         flex: 1;
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
+        .SearchButton{
+            position: absolute;
+            width: 31px;
+            height: 30px;
+            border-radius: 25px;
+            left: calc(100% - 33px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+
+        }
+            .SearchButton:hover{
+                background: rgb(28, 170, 85);
+            }
+        
+            .SearchIcon{ 
+                /* outline: 1px solid pink; */
+                width: 20px;
+            }
+
         .SearchBar{ 
             width: 100%;
             min-width: 184px;
@@ -39,7 +62,7 @@
             padding: 5px 10px; /* You can adjust these values as needed */
             border-radius: 25px; /* Adjust the radius as needed */
             background-color: rgb(68, 68, 68); 
-            border: 1px solid hsla(0, 0%, 100%, 0.5);
+            border: 2px solid rgb(111, 111, 111);
             color: white;
         }
         .SearchBar:focus{
@@ -49,6 +72,7 @@
 
     .NavBarRight{
         /* width: 33%; */
+        padding-left: 3px;
         flex: 1;
         display: flex;
         justify-content: flex-end;
@@ -83,7 +107,7 @@
             padding-left: 50px;
             max-height: 50px;
             padding-right: 50px;
-            background: rgb(10, 201, 19);
+            background: rgb(28, 209, 85);
             color: rgb(255, 255, 255);
             font: inherit;
             align-items: center;
@@ -92,8 +116,6 @@
             cursor: pointer;
         }
             .CartButton:hover{
-                border: none;
-                background: rgb(9, 174, 17);
-                border-radius: 25px;
+                background: rgb(28, 170, 85);
             }
     

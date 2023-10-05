@@ -4,6 +4,9 @@ import "./Browse.css"
 // Import Hooks
 import { useState, useEffect } from "react";
 
+// Import Links 
+import { Link } from "react-router-dom";
+
 
 
 // Component 
@@ -47,7 +50,7 @@ export const Browse = ({accessToken}) => {
 
     // Button Handlers 
 
-    const handleshow50more = () => { 
+    const handleshow10more = () => { 
         let alreadyShowing = newReleases.length;
 
         // set new Release Parameters
@@ -91,14 +94,16 @@ export const Browse = ({accessToken}) => {
                     <h3>Browse New Releases</h3>
                     <div className="NewReleasePhotoDiv">
                     {newReleases.map((release) => (
-                        <div onClick={() => console.log(release.name + " clicked")} key={release.id} className="NewReleaseImageContainer">
+                        <Link to={`/album/${release.id}`} key={release.id} className="NewReleaseImageContainer">
                             <img className="HomeCovers" src={release.images[0].url} alt={release.name} />
                             <br/>
                             <p className="CoverOverlayText"><strong>{release.name}</strong> <br/><br/>{release.artists[0].name} </p>
-                        </div>
+                        </Link>
                     ))}
                     </div>
-                    <button onClick={handleshow50more}>SHow 10 more</button>
+                    <div className="ShowMoreButtonContainer">
+                        <button className="ShowMoreButton" onClick={handleshow10more}>Show 10 more</button>
+                    </div>
                 </section>
         </div>
     )

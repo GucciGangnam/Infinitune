@@ -11,10 +11,12 @@ import './App.css'
 import { Home } from './Pages/Home'
 import { Browse } from './Pages/Browse'
 import { ErrorPage } from './Pages/ErrorPage'
-import { Product } from './Pages/Product'
+import { Artist } from './Pages/Artist'
+import { Album } from './Pages/Album'
 
 // Import Components 
 import { NavBar } from './Components/NavBar'
+
 
 
 export const App = () => {
@@ -59,12 +61,14 @@ export const App = () => {
 
   return (
     <div className='App'>
-      <NavBar />
+      <NavBar accessToken={accessToken} />
       <Routes>
         <Route path="/" element={<Home accessToken={accessToken} />} />
         <Route path="/browse" element={<Browse accessToken={accessToken} />} />
-        <Route path="/browse/product/:id" element={<Product accessToken={accessToken} />} />
+        <Route path="/album" element={<ErrorPage/>}/>
+        <Route path="/album/:id" element={<Album accessToken={accessToken}/>} />
 
+        <Route path="/artist" element={<ErrorPage/>}/>
         <Route path="*" element={<ErrorPage/>} />
 
       </Routes>

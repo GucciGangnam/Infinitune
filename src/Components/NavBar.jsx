@@ -4,25 +4,40 @@ import "./NavBar.css"
 // Import Links 
 import { Link } from "react-router-dom"
 
+// Import States 
+import { useState } from "react"
+
 
 
 // Component 
-export const NavBar = () => { 
+export const NavBar = ({accessToken}) => { 
+
+    const [searchInput, setSearchInput] = useState("");
+
+    const handleSearchInputChange = (event) => { 
+        setSearchInput(event.target.value);
+    }
+
+    const handleSearchClick = () => { 
+        console.log(searchInput)
+    }
+
     return ( 
         <div className="NavBar">
 
             <div className="NavBarLeft">
-                <h1>LOGO</h1>
+                <Link to="/"><h1>LOGO</h1></Link>
             </div>
 
             <div className="NavBarMiddle">
-            <input className="SearchBar" type="search" id="search-bar" name="search" placeholder="Search by artist..."/>
+            <input onChange={handleSearchInputChange} value={searchInput} className="SearchBar" type="search" id="search-bar" name="search" placeholder="Search by artist..."/>
+            <button onClick={handleSearchClick} className="SearchButton"><img className="SearchIcon" src="src/assets/Images/SearchGlass1.png" alt="Search Icon"/></button>
             </div>
 
             <div className="NavBarRight">
                 <ul>
                     <Link className="NavButton" to="/">Home</Link>
-                    <Link className="NavButton" to="/browse">Browse</Link>
+                    <Link className="NavButton" to="/browse">New</Link>
                     <Link className="NavButton" to="/error">ErrorPage</Link>
                 </ul>
                 <button className="CartButton">Cart</button>

@@ -87,7 +87,21 @@
                     border-radius: 15px;
                 }
                     .HomeCovers:hover{
-                        filter:blur(2px)
+                        border-radius: 50%;
+                        filter:blur(2px);
+                        animation: rotate 700ms linear infinite;
+                        transition: 400ms;
+                    }
+
+                    /* SPINNING DISK ANIMATION ANIMATIONS*/
+
+                    @keyframes rotate {
+                        0% {
+                        transform: rotate(0deg);
+                        }
+                        100% {
+                        transform: rotate(360deg);
+                        }
                     }
 
 /* API LOADING ANIMATIONS*/
