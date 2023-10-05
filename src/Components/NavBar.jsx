@@ -40,7 +40,7 @@ export const NavBar = ({accessToken}) => {
                     <Link className="NavButton" to="/browse">New</Link>
                     <Link className="NavButton" to="/error">ErrorPage</Link>
                 </ul>
-                <button className="CartButton">Cart</button>
+                <button className="CartButton">Cart<div className="CartNotification">3</div></button>
             </div>
 
         </div>

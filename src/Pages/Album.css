@@ -7,35 +7,35 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-
 }
 
-.AlbumLeftDiv{
-    display: flex; 
-    flex-direction: column;   
-    justify-content: space-evenly;
-    align-items: center;
-    border-radius: 15px;
-    background-color: rgba(34, 34, 34, 1);
-    
-    width: 40%;
-    max-width: 40%;
-    aspect-ratio: 1/1;
-    padding-bottom: 20px;
+/* LEFT SIDE */
 
-}
-    .AlbumAlbumCover{ 
-        max-width: 90%;
-        margin: 10px;
+    .AlbumLeftDiv{ 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        max-width: 40%;
+        gap: 10px;
+        padding: 10px;
+
         border-radius: 15px;
+        background-color: rgba(34, 34, 34, 1);
 
     }
+
+    .AlbumAlbumCover{ 
+        width: 100%;
+        border-radius: 15px;
+    }
+
     .TracklistButton{
         border: none;
         border-radius: 25px;
-        padding-left: 50px;
+        padding: 10px;
         max-height: 50px;
-        padding-right: 50px;
         background: rgb(28, 209, 85);
         color: rgb(255, 255, 255);
         font: inherit;
@@ -43,15 +43,108 @@
         text-align: center;
         font-size: larger;
         cursor: pointer;
+        text-decoration: none;
+
     }
         .TracklistButton:hover{ 
+            background: rgb(28, 170, 85);
+        }
+
+/* RIGHT SIDE */
+
+.AlbumRightDiv{ 
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        max-width: 40%;
+        gap: 10px;
+        padding: 10px;
+
+        border-radius: 15px;
+        background-color: rgba(34, 34, 34, 1);
+}
+    .AlbumRightDivContent{ 
+
+        width: 640px;
+        aspect-ratio: 1/1;
+        max-width: 100%;
+        border-radius: 15px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        overflow: hidden;
+    }
+        .AlbumName{
+            text-align: center;
+            font-weight: bold;
+            font-size: 2.3rem;
+        }
+
+        .ArtistName{
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+
+        }
+
+        .TracklistDiv{ 
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            width: calc(90% - 10px);
+            width: calc(90% - 10px);
+            border-radius: 15px;
+            background-color: black;
+            padding: 10px;
+            margin-bottom: 10px;
+            
+
+            overflow: scroll;
+            
+
+            
+
+        }
+
+        .TrackDiv{ 
+
+            border-radius: 15px;
+            background-color: rgba(34, 34, 34, 1);
+            padding: 10px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+    .AddToCartButton{
+        border: none;
+        border-radius: 25px;
+        padding: 10px;
+        max-height: 50px;
+        background: rgb(28, 209, 85);
+        color: rgb(255, 255, 255);
+        font: inherit;
+        align-items: center;
+        text-align: center;
+        font-size: larger;
+        cursor: pointer;
+
+    }
+        .AddToCartButton:hover{ 
             background: rgb(28, 170, 85);
         }
 
 
 
 
-
+/* 
 .AlbumRightDiv{ 
 outline: 1px solid orange;;
     display: flex; 
@@ -105,4 +198,4 @@ outline: 1px solid orange;;
         font-size: larger;
         cursor: pointer;
 
-    }
+    }  */
