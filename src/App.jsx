@@ -22,6 +22,11 @@ import { NavBar } from './Components/NavBar'
 export const App = () => {
 
   const [accessToken, setAccessToken] = useState(null);
+  const [cart, setCart] = useState([]);
+  // const [userCountry, setUserCountry] = useState(null);
+
+  // fetch users country location
+// NOT DONE YET - TRY WORK THIS ONE OUT!!!!!!!!!!!!//////////////////////////
 
   //Fetch SiteWide Spotify Access Token
   useEffect(() => {
@@ -61,12 +66,12 @@ export const App = () => {
 
   return (
     <div className='App'>
-      <NavBar accessToken={accessToken} />
+      <NavBar accessToken={accessToken} cart={cart} setCart={setCart} />
       <Routes>
         <Route path="/" element={<Home accessToken={accessToken} />} />
         <Route path="/browse" element={<Browse accessToken={accessToken} />} />
         <Route path="/album" element={<ErrorPage/>}/>
-        <Route path="/album/:id" element={<Album accessToken={accessToken}/>} />
+        <Route path="/album/:id" element={<Album accessToken={accessToken} cart={cart} setCart={setCart}/>} />
 
         <Route path="/artist" element={<ErrorPage/>}/>
         <Route path="*" element={<ErrorPage/>} />

@@ -38,14 +38,16 @@ export const Home = ({ accessToken }) => {
                     setNewReleases(data.albums.items);
                     setLoading(false);
                     setError(false);
-                    console.log(data.albums.items)
+                    console.log("Fetch");
                 } else {
                     console.error('Failed to fetch new releases');
                     setError(true);
+                    console.log("Fetch");
                 }
             } catch (error) {
                 console.error('Error fetching new releases:', error);
                 setError(true);
+                console.log("Fetch");
             }
         };
         fetchNewReleases();
@@ -109,7 +111,7 @@ export const Home = ({ accessToken }) => {
                 <h2>The worlds largest collection of physical CD's</h2>
             </div>
             <section className="NewReleaseSection">
-                <h3>Trending New Releases</h3>
+                <h3>Trending New Releases in the ...HARD CODE GB...</h3>
                 <div className="NewReleasePhotoDiv">
                     {newReleases.map((release) => (
                         <Link to={`/album/${release.id}`} key={release.id} className="NewReleaseImageContainer">

@@ -10,7 +10,7 @@ import { useState } from "react"
 
 
 // Component 
-export const NavBar = ({accessToken}) => { 
+export const NavBar = ({accessToken, cart, setCart}) => { 
 
     const [searchInput, setSearchInput] = useState("");
 
@@ -26,7 +26,7 @@ export const NavBar = ({accessToken}) => {
         <div className="NavBar">
 
             <div className="NavBarLeft">
-                <Link to="/"><h1>LOGO</h1></Link>
+                <Link to="/"><img className="SiteLogo" src="src/assets/Images/LOGO2.png" alt="Site Logo"/> </Link>
             </div>
 
             <div className="NavBarMiddle">
@@ -40,7 +40,7 @@ export const NavBar = ({accessToken}) => {
                     <Link className="NavButton" to="/browse">New</Link>
                     <Link className="NavButton" to="/error">ErrorPage</Link>
                 </ul>
-                <button className="CartButton">Cart<div className="CartNotification">3</div></button>
+                <button className="CartButton">Cart<div className="CartNotification">{cart.length}</div></button>
             </div>
 
         </div>

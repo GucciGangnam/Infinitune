@@ -20,10 +20,20 @@
     .NavBarLeft{
         /* width: 33%; */
         flex: 1;
+        display: flex;
+        align-items: center;
     }
         h1{ 
             margin: 0px;
         }
+    
+    .SiteLogo{ 
+        display: flex;
+        padding-left: 20px;
+        justify-content: center;
+        align-items: center;
+        height: 60px
+    }
 
     .NavBarMiddle{ 
         position: relative;
@@ -36,10 +46,11 @@
 
         .SearchButton{
             position: absolute;
-            width: 31px;
-            height: 30px;
+            width: 26px;
+            height: 25px;
             border-radius: 25px;
-            left: calc(100% - 33px);
+            top: 6px;
+            left: calc(100% - 31px);
             display: flex;
             justify-content: center;
             align-items: center;

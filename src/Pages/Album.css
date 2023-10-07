@@ -141,6 +141,24 @@
             background: rgb(28, 170, 85);
         }
 
+        .RemoveFromCartButton{
+            border: none;
+            border-radius: 25px;
+            padding: 10px;
+            max-height: 50px;
+            background: rgb(209, 164, 28);
+            color: rgb(255, 255, 255);
+            font: inherit;
+            align-items: center;
+            text-align: center;
+            font-size: larger;
+            cursor: pointer;
+    
+        }
+            .RemoveFromCartButton:hover{ 
+                background: rgb(168, 132, 22);
+            }
+
 
 
 

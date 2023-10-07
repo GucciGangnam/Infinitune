@@ -36,13 +36,15 @@ export const Browse = ({accessToken}) => {
                     const data = await response.json();
                     setNewReleases(data.albums.items);
                     setLoading(false);
-                    console.log(data.albums.items)
+                    console.log("Fetch");
                 } else {
                     console.error('Failed to fetch new releases');
+                    console.log("Fetch");
                 }
             } catch (error) {
                 console.error('Error fetching new releases:', error);
                 setError(true);
+                console.log("Fetch");
             }
         };
         fetchNewReleases();
