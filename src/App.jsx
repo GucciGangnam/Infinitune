@@ -13,6 +13,7 @@ import { Browse } from './Pages/Browse'
 import { ErrorPage } from './Pages/ErrorPage'
 import { Artist } from './Pages/Artist'
 import { Album } from './Pages/Album'
+import { Cart } from './Pages/Cart'
 
 // Import Components 
 import { NavBar } from './Components/NavBar'
@@ -52,16 +53,11 @@ export const App = () => {
         return data.access_token;
       } catch (error) {
         console.error("Error fetching access token:", error);
-        throw error; // You can handle the error as needed
+        throw error;
       }
     }
     fetchAccessToken();
   }, [])
-
-  //use Effect to ensure accessToken is updating
-  useEffect(() => { 
-    console.log("theaccess token is" + accessToken)
-  },[accessToken])
 
 
   return (
@@ -72,8 +68,8 @@ export const App = () => {
         <Route path="/browse" element={<Browse accessToken={accessToken} />} />
         <Route path="/album" element={<ErrorPage/>}/>
         <Route path="/album/:id" element={<Album accessToken={accessToken} cart={cart} setCart={setCart}/>} />
-
         <Route path="/artist" element={<ErrorPage/>}/>
+        <Route path="/cart" element={<Cart accessToken={accessToken} cart={cart} setCart={setCart}/>} />
         <Route path="*" element={<ErrorPage/>} />
 
       </Routes>

@@ -1,13 +1,15 @@
 .ErrorPage{ 
-    outline: 1px solid blue;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 91px);
-    overflow: scroll;
-    width: 100%;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    max-width: 2000px;
+    align-items: center;
     background-color: white;
+    margin-top: 91px;
+    min-height: calc(100vh - 91px);
 
 }
 
@@ -18,4 +20,5 @@
 
 h1{ 
     color: black;
+    text-align: center;
 }

@@ -113,6 +113,7 @@
             }
 
         .CartButton{
+            display: flex;
             border: none;
             border-radius: 25px;
             padding-left: 50px;
@@ -126,6 +127,8 @@
             font-size: larger;
             cursor: pointer;
             position: relative;
+            text-decoration: none;
+            
         }
             .CartButton:hover{
                 background: rgb(28, 170, 85);

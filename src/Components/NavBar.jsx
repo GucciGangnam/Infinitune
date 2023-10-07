@@ -40,7 +40,7 @@ export const NavBar = ({accessToken, cart, setCart}) => {
                     <Link className="NavButton" to="/browse">New</Link>
                     <Link className="NavButton" to="/error">ErrorPage</Link>
                 </ul>
-                <button className="CartButton">Cart<div className="CartNotification">{cart.length}</div></button>
+                <Link to="/cart" className="CartButton">Cart<div className="CartNotification">{cart.length}</div></Link>
             </div>
 
         </div>
