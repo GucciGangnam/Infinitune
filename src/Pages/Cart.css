@@ -5,24 +5,190 @@
     align-items: center;
     max-width: 2000px;
     align-items: center;
-    color: rgb(224, 50, 50);
     margin-top: 91px;
+    margin-bottom: 150px;
     min-height: calc(100vh - 91px);
     position: relative;
 }
 
 
+.CartItemDiv{ 
+    margin:25px;
+    border-radius: 15px;
+    background-color: rgba(34, 34, 34, 1);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px;
+    max-height: fit-content;
+    width: 90%;
+}
+
+.CartItemLeft{ 
+    width: 30%;
+}
+    .CartItemCover{ 
+        width: 150px;
+    }
+
+.CartItemInfo{
+    border-right: 1px solid rgb(111, 111, 111);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5px;
+    width: 30%;
+    height: 100%;
+}
+
+
+    .CartItemAlbumName{ 
+
+    }
+
+    .CartItemArtistsName{ 
+
+    }
+
+
+    .Price{ 
+        color: rgb(28, 209, 85);
+    }
+
+
+.CartItemButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 30%;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+    .QuantButtons{ 
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
+    .CartRemoveItem{ 
+        background: none;
+        border: 1px solid hsla(0, 100%, 50%, 0.5);
+        border-radius: 50%;
+        height: 25px;
+        width: 25px;
+        color: hsla(0, 100%, 50%, 0.5);
+        position: absolute;
+        right: 0px;
+    }
+        .CartRemoveItem:hover{       
+            border: 1px solid red;
+            color: red;
+        }
+
+    .CartPlusItem{ 
+        background: none;
+        border: 1px solid rgb(111, 111, 111);
+        border-radius: 50%;
+        height: 25px;
+        width: 25px;
+        color: rgb(111, 111, 111);
+        line-height: 10px;
+    }
+        .CartPlusItem:hover{ 
+            border: 1px solid white;
+            color: white;
+        }
+
+    .CartMinusItem{ 
+        background: none;
+        border: 1px solid rgb(111, 111, 111);
+        border-radius: 50%;
+        height: 25px;
+        width: 25px;
+        color: rgb(111, 111, 111);
+        line-height: 10px;
+    }
+        .CartMinusItem:hover{ 
+            border: 1px solid white;
+            color: white;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CHECKOUTBAR*/
+
+
 .CheckoutBar{ 
-    position: absolute;
+    position: fixed;
     height: 100px;
     width: 100%;
     bottom: 0px;
 
     margin:25px;
     border-radius: 15px;
-    background-color: rgba(34, 34, 34, 1);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    background-color: rgba(120, 120, 120, 0.755);
     width: calc(100% - 25px);
+
+    display: flex;
+    align-items: center;
 }
+
+.CheckoutLeft{
+    width: 25%;
+    padding-left: 25px;
+    font-size: larger;
+
+}
+.CheckoutMid{
+    width: 25%;
+    padding-left: 25px;
+
+}
+.CheckoutRight{
+    color: rgb(28, 209, 85);
+    width: 25%;
+    padding-left: 25px;
+
+}
+.CheckoutContinue{
+    width: 25%;
+    padding-right: 25px;
+    text-align: end;
+
+}
+
+    .CheckOutButton{
+        border: none;
+        border-radius: 25px;
+        background: rgb(28, 209, 85);
+        color: rgb(255, 255, 255);
+        font: inherit;
+        align-items: center;
+        text-align: center;
+        font-size: larger;
+        cursor: pointer;
+        position: relative;
+        text-decoration: none;
+        padding: 10px;
+    }
+
+    .CheckOutButton:hover{
+        background: rgb(28, 170, 85);
+    }

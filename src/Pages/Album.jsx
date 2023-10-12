@@ -16,15 +16,19 @@ export const Album = ({ accessToken, cart, setCart }) => {
     const [album, setAlbum] = useState("");
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
-    const [addToCartButtonClass, setAddToCartButtonClass] = useState("AddToCartButton");
-    const [addToCartText, setAddtoCartText] = useState("Add to cart");
-    // check if album is already in cart and then chaneg teh state of the button 
-    useEffect(() => { 
-        if (cart.includes(id)) {
+    const [addToCartButtonClass, setAddToCartButtonClass] = useState("");
+    const [addToCartText, setAddtoCartText] = useState("");
+
+    useEffect(() => {
+        if (cart.includes(album)) {
             setAddToCartButtonClass("RemoveFromCartButton")
             setAddtoCartText("Remove from cart");
         }
-    },[])
+        if (!cart.includes(album)) {
+            setAddToCartButtonClass("AddToCartButton")
+            setAddtoCartText("Add to cart")
+        }
+    });
 
 
     // Format milliseconds into MM:SS:MSMS
@@ -44,21 +48,22 @@ export const Album = ({ accessToken, cart, setCart }) => {
 
     //HANDLERS//
     // Handle Add To Cart button
-    const handleAddToCart = (albumID) => {
-        // Check if albumID already exists in the cart
-        if (!cart.includes(albumID)) {
-            const newCart = [...cart, albumID];
+    const handleAddToCart = (album) => {
+        // console.log(cart);
+        if (!cart.includes(album)) {
+            album.quantity = 1;
+            album.price = 7.99; //////// I CHNAGED THSI TO NUMBER FROM STRING
+            const newCart = [...cart, album];
             setCart(newCart);
-            setAddToCartButtonClass("RemoveFromCartButton")
-            setAddtoCartText("Remove from cart");
+            // setAddToCartButtonClass("RemoveFromCartButton")
+            // setAddtoCartText("Remove from cart");
         }
-        if (cart.includes(albumID)) {
-            const newCart = cart.filter(item => item !== albumID);
+        if (cart.includes(album)) {
+            const newCart = cart.filter(item => item !== album);
             setCart(newCart);
-            setAddToCartButtonClass("AddToCartButton")
-            setAddtoCartText("Add to cart")
+            // setAddToCartButtonClass("AddToCartButton")
+            // setAddtoCartText("Add to cart")
         }
-
     }
 
     // Fetch Album from Spotify API
@@ -80,7 +85,7 @@ export const Album = ({ accessToken, cart, setCart }) => {
                     const data = await response.json();
                     setAlbum(data);
                     setLoading(false);
-                    console.log("Fetch");
+                    console.log("Fetch a;bum and set album");
                 } else {
                     console.error('Failed to fetch album');
                     // setError(true);
@@ -125,8 +130,8 @@ export const Album = ({ accessToken, cart, setCart }) => {
                         ))}
                     </div>
                 </div>
-                
-                <button className={addToCartButtonClass} onClick={() => handleAddToCart(album.id)}>{addToCartText}</button>
+
+                <button className={addToCartButtonClass} onClick={() => handleAddToCart(album)}>{addToCartText}</button>
             </div>
         </div>
     );
