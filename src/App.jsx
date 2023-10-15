@@ -14,6 +14,7 @@ import { ErrorPage } from './Pages/ErrorPage'
 import { Artist } from './Pages/Artist'
 import { Album } from './Pages/Album'
 import { Cart } from './Pages/Cart'
+import { Search } from './Pages/Search'
 
 // Import Components 
 import { NavBar } from './Components/NavBar'
@@ -68,7 +69,9 @@ export const App = () => {
         <Route path="/browse" element={<Browse accessToken={accessToken} />} />
         <Route path="/album" element={<ErrorPage/>}/>
         <Route path="/album/:id" element={<Album accessToken={accessToken} cart={cart} setCart={setCart}/>} />
+        <Route path="/results/:id" element={<Search accessToken={accessToken}/>}/>
         <Route path="/artist" element={<ErrorPage/>}/>
+
         <Route path="/cart" element={<Cart accessToken={accessToken} cart={cart} setCart={setCart}/>} />
         <Route path="*" element={<ErrorPage/>} />
 

@@ -31,7 +31,7 @@ export const NavBar = ({accessToken, cart, setCart}) => {
 
             <div className="NavBarMiddle">
             <input onChange={handleSearchInputChange} value={searchInput} className="SearchBar" type="search" id="search-bar" name="search" placeholder="Search by artist..."/>
-            <button onClick={handleSearchClick} className="SearchButton"><img className="SearchIcon" src="src/assets/Images/SearchGlass1.png" alt="Search Icon"/></button>
+            <Link to={`/results/${searchInput}`} className="SearchButton"><img className="SearchIcon" src="src/assets/Images/SearchGlass1.png" alt="Search Icon"/></Link>
             </div>
 
             <div className="NavBarRight">

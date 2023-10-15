@@ -1,0 +1,11 @@
+.Search{ 
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    max-width: 2000px;
+    align-items: center;
+    color: white;
+    margin-top: 91px;
+    min-height: calc(100vh - 91px);
+}
