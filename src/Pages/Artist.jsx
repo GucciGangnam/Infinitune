@@ -73,11 +73,17 @@ if (error){
     return (
         <div className="Artist">
             Artist page for {id}
+            <section className="BrowseByContainer">
+            <div className="NewReleasePhotoDiv">
             {albums.map((album) => ( 
-                <div key={album.id}> 
-                {album.name}
-                </div>
+                <Link to={`/album/${album.id}`} key={album.id} className="NewReleaseImageContainer">
+                            <img className="HomeCovers" src={album.images[0].url} alt={album.name} />
+                            <br />
+                            <p className="CoverOverlayText"><strong>{album.name}</strong> <br /><br />{album.artists[0].name} </p>
+                        </Link>
             ))}
+            </div>
+            </section>
         </div>
     )
 }

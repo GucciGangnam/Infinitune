@@ -19,6 +19,7 @@
         justify-content: space-evenly;
         max-height: fit-content;
         width: calc(100% - 25px);
+        padding: 15px;
     }
 
         .ShowMoreButtonContainer{ 
