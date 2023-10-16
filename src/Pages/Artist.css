@@ -1,21 +1,14 @@
-.Artists{ 
-    outline: 1px solid blue;
+.Artist{ 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    width: 100vw;
     align-items: center;
-    height: calc(100vh - 91px);
-    overflow: scroll;
-    width: 100%;
-    background-color: white;
+    max-width: 2000px;
+    align-items: center;
+    color: white;
+    margin-top: 91px;
+    min-height: calc(100vh - 91px);
 
 }
 
-.ErrorIMG{ 
-    width: 20%;
-    padding-top: 10%;
-}
 
-h1{ 
-    color: black;
-}

@@ -9,3 +9,97 @@
     margin-top: 91px;
     min-height: calc(100vh - 91px);
 }
+
+.SearchTitle{
+    width: 90%;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+    padding: 15px;
+    padding-bottom: 0px;
+}
+
+.SearchResult{
+    margin:25px;
+    border-radius: 15px;
+    background-color: rgba(34, 34, 34, 1);
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px;
+    max-height: fit-content;
+    width: 90%;
+}
+    .SearchResultLeft1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+    }
+        .SearchArtistImage{ 
+            width: 200px;
+            height: 200px;
+        }
+
+
+
+    .SearchResultLeft2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+    }
+        .SearchResultArtistName{ 
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+    .SearchResultRight2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+    }
+        .SpotifyButton{ 
+            background: none;
+            border: none;
+            padding: 0;
+            margin: 0;
+            font: inherit;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .SpotifyLogo{
+            width: 50px;
+        }
+
+    .SearchResultRight1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+    }
+        .SearchResultViewAlbum{ 
+            border: none;
+            border-radius: 25px;
+            padding: 10px;
+            max-height: 50px;
+            background: rgb(28, 209, 85);
+            color: rgb(255, 255, 255);
+            font: inherit;
+            align-items: center;
+            text-align: center;
+            font-size: larger;
+            cursor: pointer;
+        }
+        .SearchResultViewAlbum:hover{ 
+            background: rgb(28, 170, 85);
+        }
+
+
+
+
+
+

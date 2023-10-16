@@ -55,6 +55,7 @@
             justify-content: center;
             align-items: center;
             border: none;
+            background: rgb(183, 183, 183);
 
         }
             .SearchButton:hover{

@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 // Component 
 
-export const Browse = ({accessToken}) => { 
+export const Browse = ({ accessToken }) => {
 
     const [newReleases, setNewReleases] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -52,7 +52,7 @@ export const Browse = ({accessToken}) => {
 
     // Button Handlers 
 
-    const handleshow10more = () => { 
+    const handleshow10more = () => {
         let alreadyShowing = newReleases.length;
 
         // set new Release Parameters
@@ -92,21 +92,23 @@ export const Browse = ({accessToken}) => {
 
     return (
         <div className="Browse">
-                <section className="BrowseByContainer">
-                    <h3>Browse New Releases</h3>
-                    <div className="NewReleasePhotoDiv">
+            <section className="BrowseByContainer">
+                <h3>Browse New Releases</h3>
+                <div className="NewReleasePhotoDiv">
                     {newReleases.map((release) => (
                         <Link to={`/album/${release.id}`} key={release.id} className="NewReleaseImageContainer">
                             <img className="HomeCovers" src={release.images[0].url} alt={release.name} />
-                            <br/>
-                            <p className="CoverOverlayText"><strong>{release.name}</strong> <br/><br/>{release.artists[0].name} </p>
+                            <br />
+                            <p className="CoverOverlayText"><strong>{release.name}</strong> <br /><br />{release.artists[0].name} </p>
                         </Link>
                     ))}
-                    </div>
-                    <div className="ShowMoreButtonContainer">
-                        <button className="ShowMoreButton" onClick={handleshow10more}>Show 10 more</button>
-                    </div>
-                </section>
+                </div>
+                <div className="ShowMoreButtonContainer">
+                    <button className="ShowMoreButton" onClick={handleshow10more} style={{
+                        display: newReleases.length >= 100 ? "none" : "block"
+                    }} >Show 10 more</button>
+                </div>
+            </section>
         </div>
     )
 }

@@ -71,6 +71,7 @@ export const App = () => {
         <Route path="/album/:id" element={<Album accessToken={accessToken} cart={cart} setCart={setCart}/>} />
         <Route path="/results/:id" element={<Search accessToken={accessToken}/>}/>
         <Route path="/artist" element={<ErrorPage/>}/>
+        <Route path="/artist/:id" element={<Artist accessToken={accessToken}/>}/>
 
         <Route path="/cart" element={<Cart accessToken={accessToken} cart={cart} setCart={setCart}/>} />
         <Route path="*" element={<ErrorPage/>} />
