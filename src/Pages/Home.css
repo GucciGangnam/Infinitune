@@ -14,14 +14,65 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        position: relative;
 
     }
 
-        .HeroText{
+        .HomeHeroText{
             color: white;
             font-size: 7rem;
             margin: 0px;
+            animation: fadeInHero 6s ease-in forwards;
         }
+        /* Animation for fade In */
+        @keyframes fadeInHero {
+            0% {
+                opacity: 0;
+            }
+            70% {
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+
+        .HomeSlogan{
+            margin: 0px;
+            
+            animation: fadeIn 4s ease-in forwards;
+            
+        }
+        /* Animation for fade In */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+
+        .HomeDescription{
+            position: absolute;
+
+            animation: fadeOut 2s ease-in forwards;
+            
+        }
+        /* Animation for fade Out */
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+                display: none;
+            }
+        }
+
 
     .NewReleaseSection{
         margin:25px;

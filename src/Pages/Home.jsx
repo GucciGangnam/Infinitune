@@ -55,13 +55,13 @@ export const Home = ({ accessToken }) => {
 
 
 
-// If FETCH NEW RELEASE API fails
+    // If FETCH NEW RELEASE API fails
     if (error) {
         return <div className="Home">
             <div className="HeroTextDiv">
-                <p className="HeroText">Infinitune</p>
-                <h2>Really FEEL your music</h2>
-                <h2>The worlds largest collection of physical CD's</h2>
+                <p className="HomeHeroText">Infinitune</p>
+                <h2 className="HomeSlogan">Really FEEL your music</h2>
+                <h2 className="HomeDescription">The worlds largest collection of physical CD's</h2>
             </div>
             <section className="NewReleaseSection">
                 <h3>Trending New Releases</h3>
@@ -74,13 +74,13 @@ export const Home = ({ accessToken }) => {
             </section>
         </div>
     }
-// While FETCH NEW RELEASE API Loads
+    // While FETCH NEW RELEASE API Loads
     if (loading) {
         return <div className="Home">
             <div className="HeroTextDiv">
-                <p className="HeroText">Infinitune</p>
-                <h2>Really FEEL your music</h2>
-                <h2>The worlds largest collection of physical CD's</h2>
+                <p className="HomeHeroText">Infinitune</p>
+                <h2 className="HomeSlogan">Really FEEL your music</h2>
+                <h2 className="HomeDescription">The worlds largest collection of physical CD's</h2>
             </div>
             <section className="NewReleaseSection">
                 <h3>Trending New Releases</h3>
@@ -102,13 +102,13 @@ export const Home = ({ accessToken }) => {
         </div>
     }
 
-// If FETCH NEW RELEASE API is successful 
+    // If FETCH NEW RELEASE API is successful 
     return (
         <div className="Home">
             <div className="HeroTextDiv">
-                <p className="HeroText">Infinitune</p>
-                <h2>Really FEEL your music</h2>
-                <h2>The worlds largest collection of physical CD's</h2>
+                <p className="HomeHeroText">Infinitune</p>
+                <h2 className="HomeSlogan" >Really FEEL your music</h2>
+                <h2 className="HomeDescription" >The worlds largest collection of physical CD's</h2>
             </div>
             <section className="NewReleaseSection">
                 <h3>Trending New Releases in the ...HARD CODE GB...</h3>
