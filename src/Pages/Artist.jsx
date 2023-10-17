@@ -72,8 +72,8 @@ if (error){
 
     return (
         <div className="Artist">
-            Artist page for {id}
             <section className="BrowseByContainer">
+                <h3>Albums by {albums[0].artists[0].name}</h3>
             <div className="NewReleasePhotoDiv">
             {albums.map((album) => ( 
                 <Link to={`/album/${album.id}`} key={album.id} className="NewReleaseImageContainer">

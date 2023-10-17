@@ -16,11 +16,13 @@ export const NavBar = ({accessToken, cart, setCart}) => {
 
     const handleSearchInputChange = (event) => { 
         setSearchInput(event.target.value);
-    }
+    };
 
-    const handleSearchClick = () => { 
-        console.log(searchInput)
-    }
+    const handleEnterKey = (event) => { 
+        if (event.key === 'Enter' && searchInput !== ""){ 
+                document.getElementById('searchButton').click();
+        }
+    };
 
     return ( 
         <div className="NavBar">
@@ -30,8 +32,8 @@ export const NavBar = ({accessToken, cart, setCart}) => {
             </div>
 
             <div className="NavBarMiddle">
-            <input onChange={handleSearchInputChange} value={searchInput} className="SearchBar" type="search" id="search-bar" name="search" placeholder="Search by artist..."/>
-            <Link to={`/results/${searchInput}`} className="SearchButton"><img className="SearchIcon" src="src/assets/Images/SearchGlass1.png" alt="Search Icon"/></Link>
+            <input onChange={handleSearchInputChange} onKeyDown={handleEnterKey} value={searchInput} className="SearchBar" type="search" id="search-bar" name="search" placeholder="Search by artist..."/>
+            <Link to={`/results/${searchInput}`} id="searchButton" className="SearchButton"><img className="SearchIcon" src="src/assets/Images/SearchGlass1.png" alt="Search Icon"/></Link>
             </div>
 
             <div className="NavBarRight">
