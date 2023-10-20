@@ -7,18 +7,9 @@ import { useState, useEffect } from "react"
 
 // Component 
 
-export const CountrySelector = () => {
+export const CountrySelector = ({countries, currentCountry, setCurrentCountry}) => {
 
-    // Countries Object
-    const countries = [
-        { code: "US", flagSrc: "src/assets/Images/US.png" },
-        { code: "CA", flagSrc: "src/assets/Images/CA.png" },
-        { code: "GB", flagSrc: "src/assets/Images/GB.png" },
-        { code: "FR", flagSrc: "src/assets/Images/FR.png" },
-        { code: "DE", flagSrc: "src/assets/Images/DE.png" },
-    ];
 
-    const [currentCountry, setCurrentCountry] = useState(countries[0]);
 
     // Button Handlers 
     const handleCountryClick = (index) => {

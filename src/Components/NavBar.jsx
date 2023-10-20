@@ -11,9 +11,8 @@ import { useState } from "react"
 import { CountrySelector } from "./CountrySelector"
 
 
-
 // Component 
-export const NavBar = ({ accessToken, cart, setCart }) => {
+export const NavBar = ({ accessToken, cart, setCart, countries, currentCountry, setCurrentCountry}) => {
 
     const [searchInput, setSearchInput] = useState("");
 
@@ -50,7 +49,7 @@ export const NavBar = ({ accessToken, cart, setCart }) => {
                     <Link className="NavButton" to="/">Home</Link>
                     <Link className="NavButton" to="/browse">New</Link>
                 </ul>
-                <CountrySelector/>
+                <CountrySelector countries={countries} currentCountry={currentCountry} setCurrentCountry={setCurrentCountry}/>
                 <Link to="/cart" className="CartButton">Cart<div className="CartNotification">{cart.length}</div></Link>
             </div>
 
