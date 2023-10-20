@@ -37,7 +37,7 @@ useEffect(() => {
 },[cart])
 
 
-    // button handlers
+    /////////////////////// button handlers
     const handlePlusItem = (album) => {
         const updatedCart = cart.map((item) => {
             if (item.id === album.id) {
@@ -64,6 +64,10 @@ useEffect(() => {
     const handleRemoveItem = (album) => { 
         const newCart = cart.filter(item => item !== album);
             setCart(newCart);
+    }
+    const handleCheckOutButton = () => { 
+        alert("Thanks for checking out my site")
+        setCart([]);
     }
 
     return (
@@ -105,7 +109,7 @@ useEffect(() => {
                     Total: ${totalPrice}
                 </div>
                 <div className="CheckoutContinue">
-                    <button className="CheckOutButton">Checkout</button>
+                    <button className="CheckOutButton" onClick={handleCheckOutButton}>Checkout</button>
                 </div>
             </div>
 

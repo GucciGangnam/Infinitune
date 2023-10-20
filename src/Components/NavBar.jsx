@@ -34,7 +34,7 @@ export const NavBar = ({ accessToken, cart, setCart, countries, currentCountry, 
             </div>
 
             <div className="NavBarMiddle">
-                <input onChange={handleSearchInputChange} onKeyDown={handleEnterKey} value={searchInput} className="SearchBar" type="search" id="search-bar" name="search" placeholder="Search by artist..." />
+                <input onChange={handleSearchInputChange} onKeyDown={handleEnterKey} autoCorrect="off" value={searchInput} className="SearchBar" type="search" id="search-bar" name="search" placeholder="Search by artist..." />
                 {searchInput !== '' ? (
                     <Link to={`/results/${searchInput}`} id="searchButton" className="SearchButton">
                         <img className="SearchIcon" src="src/assets/Images/SearchGlass1.png" alt="Search Icon" />
