@@ -4,38 +4,38 @@ import "./CountrySelector.css"
 
 // Component 
 
-export const CountrySelector = () => { 
-    return ( 
-        <div className="CountrySelector"> 
+export const CountrySelector = () => {
+    return (
+        <div className="CountrySelector">
             <div className="Flag">
                 xx xx
             </div>
             <div className="Flag">
-            GB xx
+                GB xx
             </div>
             <div className="Flag">
-            US xx
+                US xx
             </div>
             <div className="Flag">
-            AU xx
+                AU xx
             </div>
             <div className="Flag">
-            CA xx
+                CA xx
             </div>
             <div className="Flag">
-            ES xx
+                ES xx
             </div>
             <div className="Flag">
-            xx xx
+                xx xx
             </div>
             <div className="Flag">
-            xx xx
+                xx xx
             </div>
             <div className="Flag">
-            xx xx
+                xx xx
             </div>
             <div className="Flag">
-            xx xx
+                xx xx
             </div>
         </div>
     )

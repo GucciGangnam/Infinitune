@@ -49,9 +49,9 @@ export const NavBar = ({ accessToken, cart, setCart }) => {
                 <ul>
                     <Link className="NavButton" to="/">Home</Link>
                     <Link className="NavButton" to="/browse">New</Link>
-                    <CountrySelector/>
                     {/* <Link className="NavButton" to="/error">ErrorPage</Link> */}
                 </ul>
+                <CountrySelector/>
                 <Link to="/cart" className="CartButton">Cart<div className="CartNotification">{cart.length}</div></Link>
             </div>
 
