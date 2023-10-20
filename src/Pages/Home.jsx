@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 // Component 
 
-export const Home = ({ accessToken }) => {
+export const Home = ({ accessToken, currentCountry }) => {
 
     const [newReleases, setNewReleases] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -31,7 +31,7 @@ export const Home = ({ accessToken }) => {
         // Fetch top 5 new releases when the component mounts
         const fetchNewReleases = async () => {
             try {
-                const response = await fetch('https://api.spotify.com/v1/browse/new-releases?country=GB&limit=4&offset=0', newReleaseParameters
+                const response = await fetch(`https://api.spotify.com/v1/browse/new-releases?country=${currentCountry.code}&limit=4&offset=0`, newReleaseParameters
                 );
                 if (response.ok) {
                     const data = await response.json();
@@ -111,7 +111,7 @@ export const Home = ({ accessToken }) => {
                 <h2 className="HomeDescription" >The worlds largest collection of physical CD's</h2>
             </div>
             <section className="NewReleaseSection">
-                <h3>Trending New Releases from ...HARD CODE GB...</h3>
+                <h3>Trending New Releases from {currentCountry.name}</h3>
                 <div className="NewReleasePhotoDiv">
                     {newReleases.map((release) => (
                         <Link to={`/album/${release.id}`} key={release.id} className="NewReleaseImageContainer">

@@ -9,7 +9,7 @@ import { useParams } from "react-router-dom"
 
 // Component 
 
-export const Album = ({ accessToken, cart, setCart }) => {
+export const Album = ({ accessToken, cart, setCart, currentCountry }) => {
     // useParams 
     const { id } = useParams();
     // States 
@@ -79,7 +79,7 @@ export const Album = ({ accessToken, cart, setCart }) => {
         // Fetch album
         const fetchAlbum = async () => {
             try {
-                const response = await fetch(`https://api.spotify.com/v1/albums/${id}?market=GB`, albumParameters
+                const response = await fetch(`https://api.spotify.com/v1/albums/${id}?market=${currentCountry.code}`, albumParameters
                 );
                 if (response.ok) {
                     const data = await response.json();

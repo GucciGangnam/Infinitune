@@ -14,6 +14,7 @@ export const CountrySelector = ({countries, currentCountry, setCurrentCountry}) 
     // Button Handlers 
     const handleCountryClick = (index) => {
         setCurrentCountry(countries[index])
+        console.log(countries[index])
     }
 
 

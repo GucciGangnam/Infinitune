@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 // Component 
 
-export const Browse = ({ accessToken }) => {
+export const Browse = ({ accessToken, currentCountry }) => {
 
     const [newReleases, setNewReleases] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -30,7 +30,7 @@ export const Browse = ({ accessToken }) => {
         // Fetch top 5 new releases when the component mounts
         const fetchNewReleases = async () => {
             try {
-                const response = await fetch('https://api.spotify.com/v1/browse/new-releases?country=GB&limit=10&offset=0', newReleaseParameters
+                const response = await fetch(`https://api.spotify.com/v1/browse/new-releases?country=${currentCountry.code}&limit=10&offset=0`, newReleaseParameters
                 );
                 if (response.ok) {
                     const data = await response.json();
@@ -67,7 +67,7 @@ export const Browse = ({ accessToken }) => {
         // Fetch top 5 new releases when the component mounts
         const fetchNewReleases = async () => {
             try {
-                const response = await fetch(`https://api.spotify.com/v1/browse/new-releases?country=GB&limit=10&offset=${alreadyShowing}`, newReleaseParameters
+                const response = await fetch(`https://api.spotify.com/v1/browse/new-releases?country=${currentCountry.code}&limit=10&offset=${alreadyShowing}`, newReleaseParameters
                 );
                 if (response.ok) {
                     const data = await response.json();
@@ -93,7 +93,7 @@ export const Browse = ({ accessToken }) => {
     return (
         <div className="Browse">
             <section className="BrowseByContainer">
-                <h3>Browse New Releases</h3>
+                <h3>Browse New Releases from {currentCountry.name}</h3>
                 <div className="NewReleasePhotoDiv">
                     {newReleases.map((release) => (
                         <Link to={`/album/${release.id}`} key={release.id} className="NewReleaseImageContainer">

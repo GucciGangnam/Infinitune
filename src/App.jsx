@@ -36,6 +36,8 @@ export const App = () => {
     { name: "The UK", code: "GB", flagSrc: "src/assets/Images/GB.png" },
     { name: "France", code: "FR", flagSrc: "src/assets/Images/FR.png" },
     { name: "Germany", code: "DE", flagSrc: "src/assets/Images/DE.png" },
+    { name: "Thailand", code: "TH", flagSrc: "src/assets/Images/TH.png" },
+    { name: "Vietnam", code: "VN", flagSrc: "src/assets/Images/VN.png" }
 ];
 // Current Country State
 const [currentCountry, setCurrentCountry] = useState(countries[0]);
@@ -80,9 +82,9 @@ const [currentCountry, setCurrentCountry] = useState(countries[0]);
         <Route path="/browse" element={<Browse accessToken={accessToken} currentCountry={currentCountry} />} />
         <Route path="/album" element={<ErrorPage/>}/>
         <Route path="/album/:id" element={<Album accessToken={accessToken} currentCountry={currentCountry} cart={cart} setCart={setCart}/>} />
-        <Route path="/results/:id" element={<Search accessToken={accessToken} currentCountry={currentCountry}/>}/>
+        <Route path="/results/:id" element={<Search accessToken={accessToken} currentCountry={currentCountry} />}/>
         <Route path="/artist" element={<ErrorPage/>}/>
-        <Route path="/artist/:id" element={<Artist accessToken={accessToken} currentCountry={currentCountry}/>}/>
+        <Route path="/artist/:id" element={<Artist accessToken={accessToken} currentCountry={currentCountry} />}/>
 
         <Route path="/cart" element={<Cart accessToken={accessToken} cart={cart} setCart={setCart} currentCountry={currentCountry} />} />
         <Route path="*" element={<ErrorPage/>} />

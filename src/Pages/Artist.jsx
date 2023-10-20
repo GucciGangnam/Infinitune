@@ -9,7 +9,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 // Component 
-export const Artist = ({accessToken}) => {
+export const Artist = ({accessToken, currentCountry}) => {
 
     const [albums, setAlbums] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -30,7 +30,7 @@ export const Artist = ({accessToken}) => {
         // Function for searching for albums 
         const fetchArtistAlbums = async (offset) => { 
             try { 
-                const response = await fetch(`https://api.spotify.com/v1/artists/${id}/albums?include_groups=album&market=GB&limit=50&offset=${offset}`, albumParameters);
+                const response = await fetch(`https://api.spotify.com/v1/artists/${id}/albums?include_groups=album&market=${currentCountry.code}&limit=50&offset=${offset}`, albumParameters);
 
                 if (response.ok) { 
                     const data = await response.json();
