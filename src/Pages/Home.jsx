@@ -111,7 +111,7 @@ export const Home = ({ accessToken }) => {
                 <h2 className="HomeDescription" >The worlds largest collection of physical CD's</h2>
             </div>
             <section className="NewReleaseSection">
-                <h3>Trending New Releases in the ...HARD CODE GB...</h3>
+                <h3>Trending New Releases from ...HARD CODE GB...</h3>
                 <div className="NewReleasePhotoDiv">
                     {newReleases.map((release) => (
                         <Link to={`/album/${release.id}`} key={release.id} className="NewReleaseImageContainer">

@@ -7,6 +7,9 @@ import { Link } from "react-router-dom"
 // Import States 
 import { useState } from "react"
 
+// Import Components 
+import { CountrySelector } from "./CountrySelector"
+
 
 
 // Component 
@@ -46,7 +49,8 @@ export const NavBar = ({ accessToken, cart, setCart }) => {
                 <ul>
                     <Link className="NavButton" to="/">Home</Link>
                     <Link className="NavButton" to="/browse">New</Link>
-                    <Link className="NavButton" to="/error">ErrorPage</Link>
+                    <CountrySelector/>
+                    {/* <Link className="NavButton" to="/error">ErrorPage</Link> */}
                 </ul>
                 <Link to="/cart" className="CartButton">Cart<div className="CartNotification">{cart.length}</div></Link>
             </div>
