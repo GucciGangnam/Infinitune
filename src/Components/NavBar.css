@@ -84,7 +84,7 @@
 
     .NavBarRight{
         /* width: 33%; */
-        outline: 1px dashed blue;;
+        /* outline: 1px dashed blue;; */
         padding-left: 3px;
         flex: 1;
         display: flex;
@@ -93,7 +93,7 @@
         max-height: 50px;
     }
         ul{ 
-            outline: 1px dashed pink;
+            /* outline: 1px dashed pink; */
             padding: 0;
             display: flex;
             justify-content: center;
@@ -109,8 +109,8 @@
                 cursor: pointer;
                 text-decoration: none;
                 
-
-                outline: 1px solid red;
+/* 
+                outline: 1px solid red; */
             }
             .NavButton:hover{ 
                 color: rgb(154, 154, 154);
