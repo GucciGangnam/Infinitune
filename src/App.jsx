@@ -25,11 +25,13 @@ export const App = () => {
 
   const [accessToken, setAccessToken] = useState(null);
   const [cart, setCart] = useState([]);
-  // const [userCountry, setUserCountry] = useState(null);
 
+  /////////////////////////////////////// LOG USER LANGUAGE 
+  
+  /////////////////////////////////////////////////////////
 
   /////////////////////////////////////////////////COUNTRY SELECTOR 
-// Countries Object
+  // Countries Object
   const countries = [
     { name: "The USA", code: "US", flagSrc: "src/assets/Images/US.png" },
     { name: "Canada", code: "CA", flagSrc: "src/assets/Images/CA.png" },
@@ -37,11 +39,12 @@ export const App = () => {
     { name: "France", code: "FR", flagSrc: "src/assets/Images/FR.png" },
     { name: "Germany", code: "DE", flagSrc: "src/assets/Images/DE.png" },
     { name: "Thailand", code: "TH", flagSrc: "src/assets/Images/TH.png" },
-    { name: "Vietnam", code: "VN", flagSrc: "src/assets/Images/VN.png" }
-];
-// Current Country State
-const [currentCountry, setCurrentCountry] = useState(countries[0]);
-///////////////////////////////////////////////////////////////////
+    { name: "Vietnam", code: "VN", flagSrc: "src/assets/Images/VN.png" },
+    { name: "Belgium", code: "BE", flagSrc: "src/assets/Images/BE.png" }
+  ];
+  // Current Country State
+  const [currentCountry, setCurrentCountry] = useState(countries[0]);
+  ///////////////////////////////////////////////////////////////////
 
   //Fetch SiteWide Spotify Access Token
   useEffect(() => {
@@ -80,14 +83,14 @@ const [currentCountry, setCurrentCountry] = useState(countries[0]);
       <Routes>
         <Route path="/" element={<Home accessToken={accessToken} currentCountry={currentCountry} />} />
         <Route path="/browse" element={<Browse accessToken={accessToken} currentCountry={currentCountry} />} />
-        <Route path="/album" element={<ErrorPage/>}/>
-        <Route path="/album/:id" element={<Album accessToken={accessToken} currentCountry={currentCountry} cart={cart} setCart={setCart}/>} />
-        <Route path="/results/:id" element={<Search accessToken={accessToken} currentCountry={currentCountry} />}/>
-        <Route path="/artist" element={<ErrorPage/>}/>
-        <Route path="/artist/:id" element={<Artist accessToken={accessToken} currentCountry={currentCountry} />}/>
+        <Route path="/album" element={<ErrorPage />} />
+        <Route path="/album/:id" element={<Album accessToken={accessToken} currentCountry={currentCountry} cart={cart} setCart={setCart} />} />
+        <Route path="/results/:id" element={<Search accessToken={accessToken} currentCountry={currentCountry} />} />
+        <Route path="/artist" element={<ErrorPage />} />
+        <Route path="/artist/:id" element={<Artist accessToken={accessToken} currentCountry={currentCountry} />} />
 
         <Route path="/cart" element={<Cart accessToken={accessToken} cart={cart} setCart={setCart} currentCountry={currentCountry} />} />
-        <Route path="*" element={<ErrorPage/>} />
+        <Route path="*" element={<ErrorPage />} />
 
       </Routes>
     </div>
