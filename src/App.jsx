@@ -33,9 +33,9 @@ export const App = () => {
   /////////////////////////////////////////////////COUNTRY SELECTOR 
   // Countries Object
   const countries = [
-    { name: "The USA", code: "US", flagSrc: "src/assets/Images/US.png" },
-    { name: "Canada", code: "CA", flagSrc: "src/assets/Images/CA.png" },
-    { name: "The UK", code: "GB", flagSrc: "src/assets/Images/GB.png" },
+    { name: "The USA", code: "US", flagSrc: "public/US.png" },
+    { name: "Canada", code: "CA", flagSrc: "/public/CA.png" },
+    { name: "The UK", code: "GB", flagSrc: "/GB.png" },
     { name: "France", code: "FR", flagSrc: "src/assets/Images/FR.png" },
     { name: "Germany", code: "DE", flagSrc: "src/assets/Images/DE.png" },
     { name: "Thailand", code: "TH", flagSrc: "src/assets/Images/TH.png" },
