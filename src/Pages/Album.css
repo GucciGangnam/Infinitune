@@ -54,16 +54,16 @@
 
 .AlbumRightDiv{ 
     display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 
-        max-width: 40%;
-        gap: 10px;
-        padding: 10px;
+    max-width: 40%;
+    gap: 10px;
+    padding: 10px;
 
-        border-radius: 15px;
-        background-color: rgba(34, 34, 34, 1);
+    border-radius: 15px;
+    background-color: rgba(34, 34, 34, 1);
 }
     .AlbumRightDivContent{ 
 
@@ -97,18 +97,11 @@
             gap: 10px;
 
             width: calc(90% - 10px);
-            width: calc(90% - 10px);
             border-radius: 15px;
             background-color: black;
             padding: 10px;
             margin-bottom: 10px;
-            
-
             overflow: scroll;
-            
-
-            
-
         }
 
         .TrackDiv{ 
@@ -159,5 +152,47 @@
                 background: rgb(168, 132, 22);
             }
 
+/* MEDIA QUERIES FOR RESPONSIVE DESIGN  */
 
+@media screen and (orientation: portrait) and (max-width: 800px) {
+    .Album {
+        flex-direction: column;
+        max-height: 100vh;
+    }
+    .AlbumRightDiv{ 
+        max-height: 50%;
+        width: 90%;
+        max-width: 90%;
+        padding: 5px;
+    }
+    .AlbumRightDivContent{ 
+        width: 100%;
+        aspect-ratio: 0;
+    }
+    .TracklistDiv{ 
+        width: 95%;
+        margin-bottom: 0px;
+    }
+    .AlbumName{
+        font-size: 3vw;
+    }
 
+    .ArtistName{
+        font-size: 3vw;
+        margin-bottom: 3px;
+    }
+    .TrackDiv{ 
+        font-size: 3vw;
+        padding: 5px;
+    }
+    .TracklistButton{ 
+        font-size: 3vw;
+    }
+    .AddToCartButton{ 
+        font-size: 3vw;;
+    }
+    .RemoveFromCartButton{ 
+        font-size: 3vw;;
+    }
+
+}
