@@ -131,7 +131,7 @@ export const Search = ({ accessToken }) => {
                         <img className="SearchArtistImage"
                             src={
                                 artist.images[1]?.url ||
-                                'https://static.vecteezy.com/system/resources/previews/008/442/086/non_2x/illustration-of-human-icon-user-symbol-icon-modern-design-on-blank-background-free-vector.jpg'
+                                '/NoArtistImage.jpg'
                             }
                             alt="Artist Photo"
                         />
@@ -147,7 +147,7 @@ export const Search = ({ accessToken }) => {
                     </div>
                     <div className="SearchResultRight2">
                         <button className="SpotifyButton" onClick={() => window.location.href = artist.uri}>
-                            <img className="SpotifyLogo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Spotify_icon.svg/512px-Spotify_icon.svg.png" alt="Spotify Logo" />
+                            <img className="SpotifyLogo" src="/SpotifyLOGO.png" alt="Spotify Logo" />
                         </button>
                     </div>
                     <div className="SearchResultRight1">

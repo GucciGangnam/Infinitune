@@ -11,7 +11,7 @@ export const ErrorPage = () => {
             <h1>Oops! You can't take the cart outisde the site.</h1>
             <h3><Link to="/">Bring it back to the shop</Link></h3>
 
-            <img className="ErrorIMG" src="src/assets/Images/404Cart.png" alt="Crashed shopping cart" />
+            <img className="ErrorIMG" src="/404Cart.png" alt="Crashed shopping cart" />
         </div>
     )
 }

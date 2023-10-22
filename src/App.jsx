@@ -33,14 +33,14 @@ export const App = () => {
   /////////////////////////////////////////////////COUNTRY SELECTOR 
   // Countries Object
   const countries = [
-    { name: "The USA", code: "US", flagSrc: "public/US.png" },
-    { name: "Canada", code: "CA", flagSrc: "/public/CA.png" },
+    { name: "The USA", code: "US", flagSrc: "/US.png" },
+    { name: "Canada", code: "CA", flagSrc: "/CA.png" },
     { name: "The UK", code: "GB", flagSrc: "/GB.png" },
-    { name: "France", code: "FR", flagSrc: "src/assets/Images/FR.png" },
-    { name: "Germany", code: "DE", flagSrc: "src/assets/Images/DE.png" },
-    { name: "Thailand", code: "TH", flagSrc: "src/assets/Images/TH.png" },
-    { name: "Vietnam", code: "VN", flagSrc: "src/assets/Images/VN.png" },
-    { name: "Belgium", code: "BE", flagSrc: "src/assets/Images/BE.png" }
+    { name: "France", code: "FR", flagSrc: "/FR.png" },
+    { name: "Germany", code: "DE", flagSrc: "/DE.png" },
+    { name: "Thailand", code: "TH", flagSrc: "/TH.png" },
+    { name: "Vietnam", code: "VN", flagSrc: "/VN.png" },
+    { name: "Belgium", code: "BE", flagSrc: "/BE.png" }
   ];
   // Current Country State
   const [currentCountry, setCurrentCountry] = useState(countries[0]);

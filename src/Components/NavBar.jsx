@@ -30,14 +30,14 @@ export const NavBar = ({ accessToken, cart, setCart, countries, currentCountry, 
         <div className="NavBar">
 
             <div className="NavBarLeft">
-                <Link to="/"><img className="SiteLogo" src="src/assets/Images/LOGO2.png" alt="Site Logo" /> </Link>
+                <Link to="/"><img className="SiteLogo" src="/LOGO2.png" alt="Site Logo" /> </Link>
             </div>
 
             <div className="NavBarMiddle">
                 <input onChange={handleSearchInputChange} onKeyDown={handleEnterKey} autoCorrect="off" value={searchInput} className="SearchBar" type="search" id="search-bar" name="search" placeholder="Search by artist..." />
                 {searchInput !== '' ? (
                     <Link to={`/results/${searchInput}`} id="searchButton" className="SearchButton">
-                        <img className="SearchIcon" src="src/assets/Images/SearchGlass1.png" alt="Search Icon" />
+                        <img className="SearchIcon" src="/SearchGlass1.png" alt="Search Icon" />
                     </Link>
                 ) : (
                     null
