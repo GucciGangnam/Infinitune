@@ -157,8 +157,6 @@
         }
     
         @media screen and (max-width: 687px) {
-            /* Your CSS styles or actions go here */
-            /* For example, you can change the background color */
             #HomeBTN {
             display: none;
             }

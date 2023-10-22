@@ -47,7 +47,7 @@ export const NavBar = ({ accessToken, cart, setCart, countries, currentCountry, 
             <div className="NavBarRight">
                 <ul>
                     <Link className="NavButton" id="HomeBTN" to="/">Home</Link>
-                    <Link className="NavButton" to="/browse">New</Link>
+                    <Link className="NavButton" id="NewBTN" to="/browse">New</Link>
                 </ul>
                 <CountrySelector countries={countries} currentCountry={currentCountry} setCurrentCountry={setCurrentCountry}/>
                 <Link to="/cart" className="CartButton">Cart<div className="CartNotification">{cart.length}</div></Link>
