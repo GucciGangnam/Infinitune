@@ -18,6 +18,7 @@ import { Search } from './Pages/Search'
 
 // Import Components 
 import { NavBar } from './Components/NavBar'
+import { NavbarMobile } from './Components/Navbar-mobile'
 
 
 
@@ -26,8 +27,22 @@ export const App = () => {
   const [accessToken, setAccessToken] = useState(null);
   const [cart, setCart] = useState([]);
 
-  /////////////////////////////////////// LOG USER LANGUAGE 
-  
+  /////////////////////////////////////// IS THE SITE ON MOBILE????
+  const [isMobile, setIsMobile] = useState(window.matchMedia('(max-width: 600px)').matches);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 575px)');
+
+    const handleMediaQueryChange = (e) => {
+      setIsMobile(e.matches);
+    };
+
+    mediaQuery.addEventListener('change', handleMediaQueryChange);
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleMediaQueryChange);
+    };
+  }, []);
   /////////////////////////////////////////////////////////
 
   /////////////////////////////////////////////////COUNTRY SELECTOR 
@@ -79,7 +94,13 @@ export const App = () => {
 
   return (
     <div className='App'>
-      <NavBar accessToken={accessToken} cart={cart} setCart={setCart} countries={countries} currentCountry={currentCountry} setCurrentCountry={setCurrentCountry} />
+      {isMobile ? (
+        <NavbarMobile accessToken={accessToken} cart={cart} setCart={setCart} countries={countries} currentCountry={currentCountry} setCurrentCountry={setCurrentCountry} />
+      ) : (
+        <NavBar accessToken={accessToken} cart={cart} setCart={setCart} countries={countries} currentCountry={currentCountry} setCurrentCountry={setCurrentCountry} />
+      )}
+      {/* <NavBar accessToken={accessToken} cart={cart} setCart={setCart} countries={countries} currentCountry={currentCountry} setCurrentCountry={setCurrentCountry} />
+      <NavbarMobile accessToken={accessToken} cart={cart} setCart={setCart} countries={countries} currentCountry={currentCountry} setCurrentCountry={setCurrentCountry} /> */}
       <Routes>
         <Route path="/" element={<Home accessToken={accessToken} currentCountry={currentCountry} />} />
         <Route path="/browse" element={<Browse accessToken={accessToken} currentCountry={currentCountry} />} />
@@ -98,3 +119,5 @@ export const App = () => {
 }
 
 export default App
+
+
