@@ -45,11 +45,11 @@ export const NavbarMobile = ({ accessToken, cart, setCart, countries, currentCou
         <div className="NavbarMobile">
             <div className='NavbarMobileTop'>
                 <Link to="/"><img className="SiteLogo" src="/LOGO2.png" alt="Site Logo" /> </Link>
-                    <input onChange={handleSearchInputChange} onKeyDown={handleEnterKey} autoCorrect="off" value={searchInput} className="SearchBar" type="search" id="search-bar" name="search" placeholder="Search by artist..." />
-                <img onClick={handleMenuClick} className='MenuIcon' src='/Menu.png' alt='Menu icon' style={{ transform: menuStatus === 'open' ? 'rotate(90deg)' : 'none' }}/>
+                    <input enterKeyHint="search" onChange={handleSearchInputChange} onKeyDown={handleEnterKey} autoCorrect="off" value={searchInput} className="SearchBar" type="search" id="search-bar" name="search" placeholder="Search by artist..." />
+                <img onClick={handleMenuClick} className='MenuIcon' src='/Menu.png' alt='Menu icon' style={{ transform: menuStatus === 'open' ? 'rotate(90deg)' : 'none' }} />
                 <div className="BurgerCartNotification">{cart.length}</div>
-                
-                
+
+
             </div>
             {menuStatus === "open" && (
                 <div className='NavbarMobileBottom'>
