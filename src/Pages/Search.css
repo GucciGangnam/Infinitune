@@ -99,7 +99,40 @@
         }
 
 
-
+@media (orientation: portrait) {
+    .Search{ 
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .SearchResult{ 
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        align-items: center;
+    }
+    .SearchResultLeft1{
+        width: 100%;
+    }
+    .SearchResultLeft2{ 
+        width: 100%;
+    }
+    .SearchResultArtistName{ 
+        width: 100%;
+        margin: 5%;
+    }
+    p{
+        margin: 0px;
+    }
+    .SearchResultRight1{ 
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .SearchResultViewAlbum{
+        width: 100%
+    }
+}
 
 
 

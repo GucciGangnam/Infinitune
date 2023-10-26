@@ -165,3 +165,4 @@ export const Search = ({ accessToken }) => {
         </div>
     )
 }
+

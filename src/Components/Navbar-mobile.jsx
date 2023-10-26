@@ -29,7 +29,7 @@ export const NavbarMobile = ({ accessToken, cart, setCart, countries, currentCou
             setMenuStatus("closed")
         }
     }
-    const closeBurgerMenu = () => { 
+    const closeBurgerMenu = () => {
         setMenuStatus("closed")
     }
 
@@ -45,15 +45,18 @@ export const NavbarMobile = ({ accessToken, cart, setCart, countries, currentCou
         <div className="NavbarMobile">
             <div className='NavbarMobileTop'>
                 <Link to="/"><img className="SiteLogo" src="/LOGO2.png" alt="Site Logo" /> </Link>
-                <input onChange={handleSearchInputChange} onKeyDown={handleEnterKey} autoCorrect="off" value={searchInput} className="SearchBar" type="search" id="search-bar" name="search" placeholder="Search by artist..." />
-                <img onClick={handleMenuClick} className='MenuIcon' src='/Menu.png' alt='Menu icon' style={{ transform: menuStatus === 'open' ? 'rotate(90deg)' : 'none' }} />
+                    <input onChange={handleSearchInputChange} onKeyDown={handleEnterKey} autoCorrect="off" value={searchInput} className="SearchBar" type="search" id="search-bar" name="search" placeholder="Search by artist..." />
+                <img onClick={handleMenuClick} className='MenuIcon' src='/Menu.png' alt='Menu icon' style={{ transform: menuStatus === 'open' ? 'rotate(90deg)' : 'none' }}/>
+                <div className="BurgerCartNotification">{cart.length}</div>
+                
+                
             </div>
             {menuStatus === "open" && (
                 <div className='NavbarMobileBottom'>
                     <Link onClick={closeBurgerMenu} className="NavBurgerButton" to="/">Home</Link>
                     <Link onClick={closeBurgerMenu} className="NavBurgerButton" to="/browse">New</Link>
                     <button onClick={closeBurgerMenu} className='NavBurgerButton'>Country</button>
-                    <button onClick={closeBurgerMenu} className='NavBurgerButton'>Cart</button>
+                    <Link onClick={closeBurgerMenu} to="/cart" className="CartButton">Cart<div className="CartNotification">{cart.length}</div></Link>
                 </div>
             )}
 

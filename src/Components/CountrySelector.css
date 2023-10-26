@@ -2,6 +2,7 @@
 
 .CountrySelector{ 
     width: 70px;
+    min-width: 70px;
     
     background-color: rgb(34, 34, 34);
     display: flex;

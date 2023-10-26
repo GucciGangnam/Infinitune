@@ -106,7 +106,7 @@ useEffect(() => {
                     Items: {totalItems}
                 </div>
                 <div className="CheckoutRight">
-                    Total: ${totalPrice}
+                    Total: ${totalPrice.toFixed(2)}
                 </div>
                 <div className="CheckoutContinue">
                     <button className="CheckOutButton" onClick={handleCheckOutButton}>Checkout</button>
