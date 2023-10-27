@@ -108,7 +108,7 @@
     .SearchResult{ 
         display: flex;
         flex-direction: column;
-        width: fit-content;
+        width: 90%;
         align-items: center;
     }
     .SearchResultLeft1{
