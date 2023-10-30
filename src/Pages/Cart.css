@@ -75,46 +75,51 @@
 
     .CartRemoveItem{ 
         background: none;
-        border: 1px solid hsla(0, 100%, 50%, 0.5);
-        border-radius: 50%;
-        height: 25px;
-        width: 25px;
-        color: hsla(0, 100%, 50%, 0.5);
-        position: absolute;
-        right: 0px;
+        border: none;
+        padding: 0px;
+        margin: 0px;
+        width: 30px;
+        padding: 0px;
     }
-        .CartRemoveItem:hover{       
-            border: 1px solid red;
-            color: red;
+        .CartRemoveItemSRC{ 
+            width: 100%;
+            opacity: 50%;
         }
+            .CartRemoveItemSRC:hover{ 
+                opacity: 100%;
+            }
 
     .CartPlusItem{ 
         background: none;
-        border: 1px solid rgb(111, 111, 111);
-        border-radius: 50%;
-        height: 25px;
-        width: 25px;
-        color: rgb(111, 111, 111);
-        line-height: 10px;
+        border: none;
+        padding: 0px;
+        margin: 0px;
+        width: 30px;
+        padding: 0px;
     }
-        .CartPlusItem:hover{ 
-            border: 1px solid white;
-            color: white;
+        .CartPlusItemSRC{ 
+            width: 100%;
+            opacity: 50%;
         }
+            .CartPlusItemSRC:hover{ 
+                opacity: 100%;
+            }
 
-    .CartMinusItem{ 
-        background: none;
-        border: 1px solid rgb(111, 111, 111);
-        border-radius: 50%;
-        height: 25px;
-        width: 25px;
-        color: rgb(111, 111, 111);
-        line-height: 10px;
-    }
-        .CartMinusItem:hover{ 
-            border: 1px solid white;
-            color: white;
-        }
+            .CartMinusItem{ 
+                background: none;
+                border: none;
+                padding: 0px;
+                margin: 0px;
+                width: 30px;
+                padding: 0px;
+            }
+                .CartMinusItemSRC{ 
+                    width: 100%;
+                    opacity: 50%;
+                }
+                    .CartMinusItemSRC:hover{ 
+                        opacity: 100%;
+                    }
 
 
 
@@ -200,11 +205,14 @@
 
     @media screen and (max-width: 700px) {
         .CartItemDiv{ 
-            width: 90%
+            width: 90%;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             gap: 10px;
+        }
+        .CartItemAlbumName{ 
+            text-align: center;
         }
         .CartItemInfo{ 
             width: 100%;

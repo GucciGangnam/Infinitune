@@ -89,11 +89,17 @@ useEffect(() => {
                     </div>
                     <div className="CartItemButton">
                         <div className="QuantButtons">
-                            <button className="CartPlusItem" onClick={() => handlePlusItem(album)}>+</button>
-                            <button className="CartMinusItem" onClick={() => handleMinusItem(album)}>-</button>
+                            <button className="CartPlusItem" onClick={() => handlePlusItem(album)}>
+                                <img className="CartPlusItemSRC" src="/Add.png" alt="PlusButton"/>
+                            </button>
+                            <button className="CartMinusItem" onClick={() => handleMinusItem(album)}>
+                                <img className="CartMinusItemSRC" src="/Minus.png" alt="MinusButton"/>
+                            </button>
                         </div>
                         <div className="Quantity">{album.quantity}</div>
-                        <button className="CartRemoveItem" onClick={() => {handleRemoveItem(album)}}> X </button>
+                        <button className="CartRemoveItem" onClick={() => {handleRemoveItem(album)}}>
+                            <img className="CartRemoveItemSRC" src="/Cancel.png" alt="RemoveButton"/>
+                        </button>
                     </div>
                 </div>
             ))}
