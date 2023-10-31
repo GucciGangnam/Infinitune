@@ -43,7 +43,7 @@ export const App = () => {
   /////////////////////////////////////////////////////////
 
   //////////////  Is the Country selector showing????
-  const [isCSShowing, setIsCSShowing] = useState(true);
+  const [isCSShowing, setIsCSShowing] = useState(false);
 
   //////////////
 
