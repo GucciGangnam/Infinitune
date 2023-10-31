@@ -9,9 +9,11 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 // Stytles 
 import "./Navbar-mobile.css"
+// Components
+import { CountrySelector } from './CountrySelector';
 
 // Component 
-export const NavbarMobile = ({ accessToken, cart, setCart, countries, currentCountry, setCurrentCountry }) => {
+export const NavbarMobile = ({ setIsCSShowing, isCSShowing, accessToken, cart, setCart, countries, currentCountry, setCurrentCountry }) => {
 
     // Search Input 
     const [searchInput, setSearchInput] = useState("");
@@ -32,6 +34,12 @@ export const NavbarMobile = ({ accessToken, cart, setCart, countries, currentCou
     const closeBurgerMenu = () => {
         setMenuStatus("closed")
     }
+    const handleCountryClick = () => { 
+        closeBurgerMenu();
+        setIsCSShowing(true);
+    }
+
+
 
 
     const navigate = useNavigate();
@@ -55,7 +63,7 @@ export const NavbarMobile = ({ accessToken, cart, setCart, countries, currentCou
                 <div className='NavbarMobileBottom'>
                     <Link onClick={closeBurgerMenu} className="NavBurgerButton" to="/">Home</Link>
                     <Link onClick={closeBurgerMenu} className="NavBurgerButton" to="/browse">New</Link>
-                    <button onClick={closeBurgerMenu} className='NavBurgerButton'>Country</button>
+                    <button onClick={handleCountryClick} className='NavBurgerButton'>Country</button>
                     <Link onClick={closeBurgerMenu} to="/cart" className="CartButton">Cart<div className="CartNotification">{cart.length}</div></Link>
                 </div>
             )}
