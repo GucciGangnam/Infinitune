@@ -27,7 +27,7 @@ Im inpressed with Spotify's API and the flexibility it gave me to but this app.
 
 ### Picture 1
 
-![Screenshot 1](picture1.png)
+![Screenshot 1](pcture1.png)
 
 ### Picture 2
 
@@ -40,3 +40,7 @@ Im inpressed with Spotify's API and the flexibility it gave me to but this app.
 ### Picture 4
 
 ![Screenshot 4](picture4.png)
+
+### Picture 5
+
+![Screenshot 5](picture5.png)
